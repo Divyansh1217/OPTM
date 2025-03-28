@@ -1,0 +1,225 @@
+
+/* Fix dashboard grid on smaller screens */
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .dashboard-grid > div {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+}
+
+/* Fix table layouts on mobile */
+@media (max-width: 640px) {
+  .responsive-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  /* Ensure tables don't overflow their container */
+  table {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Better spacing for table cells on mobile */
+  td, th {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+/* General fix for overflow issues */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Fix content overflow */
+.overflow-container {
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+/* Ensure proper z-index for popups/modals */
+.popup, .modal, [role="dialog"] {
+  z-index: 100;
+}
+
+/* Ensure dropdowns appear above other elements */
+.select-menu, .dropdown-menu {
+  z-index: 50 !important;
+}
+
+/* Dashboard layout grid improvements */
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+/* Dashboard card layout improvements */
+.dashboard-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .dashboard-card-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Better dashboard experience on mobile */
+  .dashboard-container {
+    padding: 0.5rem;
+  }
+}
+
+/* Better responsive behavior for patient cards */
+@media (max-width: 768px) {
+  .patient-card {
+    padding: 0.75rem;
+  }
+  
+  .patient-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .patient-avatar {
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+  }
+  
+  .patient-name {
+    font-size: 1rem;
+  }
+  
+  .patient-table-wrapper {
+    margin: 0 -1rem;
+    width: calc(100% + 2rem);
+    padding: 0 1rem;
+  }
+}
+
+/* Tab content container improvements */
+.tab-content-container {
+  width: 100%;
+  transition: opacity 0.2s ease-in-out;
+  position: relative;
+}
+
+/* Content wrapper improvements */
+.content-wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .content-wrapper {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-wrapper {
+    padding: 0 2rem;
+  }
+}
+
+/* Dashboard section spacing */
+.dashboard-section {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .dashboard-section {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Fix for card components on small screens */
+@media (max-width: 640px) {
+  .card-content-container {
+    padding: 0.75rem;
+  }
+  
+  .card-header {
+    padding: 0.75rem 0.75rem 0;
+  }
+  
+  .card-footer {
+    padding: 0 0.75rem 0.75rem;
+  }
+}
+
+/* Ensure chart containers are visible */
+.chart-container, .recharts-wrapper, .recharts-surface {
+  position: relative;
+}
+
+/* Fix z-index for tabs to ensure they're clickable */
+.dashboard-tabs, [role="tablist"], [role="tab"], [role="tabpanel"] {
+  position: relative;
+  z-index: 10;
+}
+
+/* Make sure loading spinners have proper z-index */
+.loading-spinner {
+  z-index: 1000;
+}
+
+/* Ensure dropdowns and popovers are on top */
+[data-radix-popper-content-wrapper] {
+  z-index: 100 !important;
+}
+
+/* Fix Radix component positioning */
+[data-radix-scroll-area-viewport] {
+  height: 100% !important;
+}
+
+/* Make sure selection dropdowns aren't hidden behind content */
+.select-content, .select-trigger, .select-viewport, 
+.select-item, .select-group, .select-label, 
+.select-separator, .select-arrow {
+  z-index: 50 !important;
+}
+
+/* Fix full height and display issues */
+.full-height-layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-layout {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.main-content-area {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}

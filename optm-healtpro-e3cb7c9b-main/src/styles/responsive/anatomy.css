@@ -1,0 +1,109 @@
+
+/* Improved responsive utilities for anatomy model */
+.anatomy-canvas-container {
+  height: 100%;
+  width: 100%;
+  min-height: 550px;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.anatomy-model-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: visible !important;
+  transform-origin: center center !important;
+}
+
+.model-image {
+  object-fit: contain !important;
+  max-width: 70% !important;
+  max-height: 70% !important;
+  width: auto !important;
+  height: auto !important;
+  object-position: center !important;
+  margin: 0 auto !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.anatomy-model-container {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: visible !important;
+  padding: 0 !important;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Specific screen size adjustments for anatomy model */
+@media (max-width: 640px) {
+  .anatomy-canvas-container {
+    min-height: 450px;
+    height: 450px;
+  }
+  
+  .anatomy-model-container {
+    height: 450px !important;
+    width: 100% !important;
+  }
+  
+  .model-image {
+    max-height: 60%;
+    max-width: 60%;
+  }
+  
+  .text-xs-mobile {
+    font-size: 0.65rem;
+  }
+  
+  .p-mobile {
+    padding: 0.5rem;
+  }
+  
+  .gap-mobile {
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .anatomy-canvas-container {
+    min-height: 600px;
+    height: 600px;
+  }
+  
+  .anatomy-model-container {
+    height: 600px !important;
+    width: 100% !important;
+  }
+  
+  .model-image {
+    max-height: 65%;
+    max-width: 65%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .anatomy-canvas-container {
+    min-height: 750px;
+    height: 750px;
+  }
+  
+  .anatomy-model-container {
+    height: 750px !important;
+    width: 100% !important;
+  }
+  
+  .model-image {
+    max-height: 70%;
+    max-width: 70%;
+  }
+}

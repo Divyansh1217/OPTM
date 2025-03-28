@@ -1,0 +1,51 @@
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Import responsive styles */
+@import './styles/responsive/anatomy-components.css';
+@import './styles/responsive/dialog.css';
+
+/* Global styles */
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 247, 247, 252;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 16, 16, 20;
+    --background-end-rgb: 24, 24, 32;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+}
+
+/* Glass morphism effect for cards and containers */
+.glass-morphism {
+  @apply bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60;
+}
+
+/* Override form styling */
+.form-item-spaced {
+  @apply space-y-2;
+}
+
+.indicator-dot {
+  @apply inline-block w-2 h-2 rounded-full mr-2;
+}
+
+/* Z-index fixes for dialogs and popovers */
+[data-radix-popper-content-wrapper] {
+  z-index: 50 !important;
+}

@@ -1,0 +1,46 @@
+
+/* Motion tracker specific styles */
+@media (max-width: 768px) {
+  .motion-tracker-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .feedback-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .control-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .control-button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Better responsive layout on medium screens */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .motion-tracker-container {
+    padding: 1rem;
+  }
+  
+  .motion-tracker-grid {
+    gap: 1rem;
+  }
+}
+
+/* Improve layout on large screens */
+@media (min-width: 1024px) {
+  .motion-tracker-container {
+    padding: 1.5rem;
+  }
+  
+  .motion-tracker-grid {
+    grid-template-columns: 7fr 5fr;
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,21 @@
+
+/* Exercise card specific styles */
+@media (max-width: 768px) {
+  .exercise-card-footer {
+    @apply flex-wrap gap-2 justify-between;
+  }
+  
+  .exercise-card-button {
+    @apply text-xs py-1 px-2 rounded;
+  }
+}
+
+@media (max-width: 480px) {
+  .exercise-card-footer {
+    @apply gap-1 flex-col items-start;
+  }
+  
+  .exercise-card-button {
+    @apply text-xs py-1 px-2 w-full;
+  }
+}

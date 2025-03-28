@@ -1,0 +1,18 @@
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Import responsive styles */
+@import './responsive/layout.css';
+@import './responsive/cards.css';
+@import './responsive/exercise-page.css';
+@import './responsive/motion-layout.css';
+@import './responsive/motion-cards.css';
+@import './responsive/motion-metrics.css';
+@import './responsive/camera-styles.css';
+
+/* Import utility styles */
+@import './utilities.css';
+
+/* Any additional global styles can go here */

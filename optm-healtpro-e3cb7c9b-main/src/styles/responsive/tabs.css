@@ -1,0 +1,100 @@
+
+/* Tab changes for small screens */
+@media (max-width: 640px) {
+  .tabs-container .tabs-list {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.5rem;
+    padding: 0.25rem;
+  }
+  
+  .tabs-container .tab-trigger {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.25rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+/* Fix tab overflow issues */
+.tabs-container {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  -ms-overflow-style: none;
+}
+
+.tabs-container::-webkit-scrollbar {
+  height: 3px;
+}
+
+.tabs-container::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.3);
+  border-radius: 3px;
+}
+
+/* Ensure tabs have proper spacing on mobile */
+@media (max-width: 480px) {
+  .tab-trigger {
+    min-width: auto;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .tabs-list {
+    padding: 0.25rem;
+  }
+}
+
+/* Improve tabs headers spacing and layout */
+.tabs-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tabs-content {
+  overflow: hidden;
+}
+
+/* Alternative tab layout for limited space */
+.stacked-tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.stacked-tabs .tab-item {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.stacked-tabs .tab-item:last-child {
+  border-bottom: none;
+}
+
+/* Tab content transitions */
+.tabs-content [data-state="active"] {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive tab layout improvements */
+@media (max-width: 768px) {
+  .responsive-tabs {
+    flex-direction: column;
+  }
+  
+  .responsive-tabs .tab-panel {
+    padding: 1rem 0;
+  }
+  
+  .tabs-container .tabs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5rem;
+  }
+}

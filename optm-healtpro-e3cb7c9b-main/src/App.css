@@ -1,0 +1,213 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--background, #f8f9fa);
+  color: var(--foreground, #333333);
+  overflow-x: hidden;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 1;
+  position: relative;
+}
+
+/* Fix for white screen when content doesn't fill viewport */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+/* Prevent layout shifts */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+/* Prevent stuck scrolling issues */
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Ensure dialogs don't cause page shifts */
+[role="dialog"] {
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: var(--background);
+  z-index: 100;
+}
+
+/* Fix flex layouts for page containers */
+.flex.h-screen.w-full {
+  min-height: 100vh;
+  height: auto !important;
+  display: flex !important;
+}
+
+.flex-1.flex.flex-col {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 0;
+  flex: 1 1 auto !important;
+}
+
+.flex-1.overflow-y-auto {
+  flex: 1 1 auto !important;
+  overflow-y: auto !important;
+  min-height: 0;
+}
+
+/* Additional crucial fixes */
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+/* Improved hotspot visibility */
+.hotspot-marker {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Improve body map positioning */
+.anatomy-position-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Prevent nested scrolling issues */
+.overflow-container {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Fix for Safari height issues */
+@supports (-webkit-touch-callout: none) {
+  .h-screen {
+    height: -webkit-fill-available;
+  }
+}
+
+/* Fix visibility issues with elements */
+.visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Ensure card visibility */
+.card {
+  background-color: var(--card, white);
+  border: 1px solid var(--border, rgba(0,0,0,0.1));
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix dialog content visibility */
+.dialog-content {
+  background-color: var(--background, white);
+  border: 1px solid var(--border, rgba(0,0,0,0.1));
+  border-radius: 0.5rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  z-index: 50;
+}
+
+/* Dark mode text contrast improvement */
+.dark {
+  --high-contrast-text: rgb(240, 240, 240);
+  --card-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Light mode text contrast improvement */
+:root {
+  --high-contrast-text: rgb(30, 30, 30);
+  --card-border: rgba(0, 0, 0, 0.1);
+}
+
+/* General loading spinner styles */
+.global-loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 9999;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--primary, #4f46e5);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Make sure headers and footers are always visible */
+header, footer {
+  position: relative;
+  z-index: 10;
+}
+
+/* Loading state styles */
+.loading-state {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Make sure content containers are visible */
+.content-container {
+  position: relative;
+  flex: 1;
+  overflow: auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}

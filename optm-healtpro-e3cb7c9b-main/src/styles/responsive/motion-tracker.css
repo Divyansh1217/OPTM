@@ -1,0 +1,266 @@
+
+/* Enhanced Motion Tracker Styles */
+.motion-tracker-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+/* Motion tracker grid - responsive layout */
+.motion-tracker-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* Camera view styling */
+.camera-container {
+  position: relative;
+  aspect-ratio: 16/9;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background-color: var(--muted);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.camera-view {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.camera-instruction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  z-index: 10;
+  width: 90%;
+  max-width: 400px;
+  backdrop-filter: blur(4px);
+}
+
+.tracking-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+/* Status indicator for sync and AI status */
+.ai-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.ai-status.ready {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: rgb(16, 185, 129);
+}
+
+.ai-status.loading {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: rgb(245, 158, 11);
+}
+
+/* Feedback panel styling */
+.feedback-panel {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.feedback-header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.feedback-content {
+  padding: 1.25rem;
+}
+
+/* Status indicator styling */
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.status-indicator.success {
+  background-color: var(--success-background);
+  color: var(--success-foreground);
+}
+
+.status-indicator.warning {
+  background-color: var(--warning-background);
+  color: var(--warning-foreground);
+}
+
+.status-indicator.error {
+  background-color: var(--error-background);
+  color: var(--error-foreground);
+}
+
+.status-indicator.info {
+  background-color: var(--info-background);
+  color: var(--info-foreground);
+}
+
+/* Stats grid layout */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Stat card styling */
+.stat-card {
+  background-color: var(--muted);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+/* Biomarker card styling */
+.biomarker-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.biomarker-card {
+  background-color: var(--muted);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+}
+
+.biomarker-header {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  margin-bottom: 0.5rem;
+}
+
+.biomarker-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Control buttons */
+.control-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Responsive styling */
+@media (min-width: 1024px) {
+  .motion-tracker-grid {
+    grid-template-columns: 7fr 5fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 639px) {
+  .motion-tracker-grid {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .control-buttons {
+    flex-direction: column;
+  }
+  
+  .biomarker-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .camera-instruction {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  .ai-status {
+    padding: 0.375rem 0.625rem;
+    font-size: 0.75rem;
+  }
+  
+  .stat-value {
+    font-size: 1.25rem;
+  }
+}
+
+/* Dark mode adjustments */
+.dark .camera-container {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.dark .camera-instruction {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dark .ai-status.ready {
+  background-color: rgba(16, 185, 129, 0.2);
+}
+
+.dark .ai-status.loading {
+  background-color: rgba(245, 158, 11, 0.2);
+}
+
+.dark .biomarker-card,
+.dark .stat-card {
+  background-color: rgba(255, 255, 255, 0.05);
+}

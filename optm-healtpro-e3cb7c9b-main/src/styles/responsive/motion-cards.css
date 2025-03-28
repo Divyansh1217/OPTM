@@ -1,0 +1,79 @@
+
+/* Improved card layout */
+.motion-analysis-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease-in-out;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.motion-analysis-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.motion-analysis-card-header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--card-foreground-lighter, rgba(255, 255, 255, 0.05));
+}
+
+.motion-analysis-card-content {
+  padding: 1rem;
+  flex: 1;
+}
+
+/* Card shadows and hover effects */
+.interactive-card {
+  transition: all 0.2s ease-in-out;
+  border: 1px solid var(--border);
+}
+
+.interactive-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Card separators */
+.card-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border);
+  margin: 0.75rem 0;
+}
+
+/* Better instruction cards */
+.instruction-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--secondary-light, rgba(240, 240, 250, 0.3));
+  margin-bottom: 0.5rem;
+}
+
+.instruction-card:last-child {
+  margin-bottom: 0;
+}
+
+.instruction-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.instruction-text {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}

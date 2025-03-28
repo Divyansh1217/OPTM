@@ -1,0 +1,123 @@
+
+/* Handling overflow */
+.card-overflow-auto {
+  @apply overflow-auto;
+}
+
+.card-overflow-hidden {
+  @apply overflow-hidden;
+}
+
+/* Flexible spacing utilities */
+.card-gap-sm {
+  @apply gap-2;
+}
+
+.card-gap-md {
+  @apply gap-3 md:gap-4;
+}
+
+.card-gap-lg {
+  @apply gap-4 md:gap-6;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply hover:shadow-md hover:border-border/60 transition-all duration-200;
+}
+
+/* Card in grid container */
+.cards-container {
+  @apply grid gap-4 md:gap-6;
+}
+
+.cards-container-responsive {
+  @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6;
+}
+
+/* Ensure proper text wrapping and truncation */
+.card-text-wrap {
+  @apply break-words;
+}
+
+.card-text-truncate {
+  @apply truncate;
+}
+
+.card-text-line-clamp-2 {
+  @apply line-clamp-2;
+}
+
+/* Card alignment utilities */
+.card-content-center {
+  @apply flex flex-col items-center justify-center text-center;
+}
+
+.card-content-left {
+  @apply flex flex-col items-start text-left;
+}
+
+.card-content-right {
+  @apply flex flex-col items-end text-right;
+}
+
+/* Card border radius variations */
+.card-rounded-sm {
+  @apply rounded-md;
+}
+
+.card-rounded-md {
+  @apply rounded-lg;
+}
+
+.card-rounded-lg {
+  @apply rounded-xl;
+}
+
+/* Card shadow variations */
+.card-shadow-sm {
+  @apply shadow-sm;
+}
+
+.card-shadow-md {
+  @apply shadow-md;
+}
+
+.card-shadow-lg {
+  @apply shadow-lg;
+}
+
+/* Flex utilities for card layouts */
+.card-row {
+  @apply flex flex-row items-center;
+}
+
+.card-row-between {
+  @apply flex flex-row items-center justify-between;
+}
+
+.card-col {
+  @apply flex flex-col;
+}
+
+/* Card status indicators */
+.card-status {
+  @apply absolute top-0 right-0 w-2 h-2 rounded-full m-2;
+}
+
+.card-status-success {
+  @apply bg-green-500;
+}
+
+.card-status-warning {
+  @apply bg-yellow-500;
+}
+
+.card-status-error {
+  @apply bg-red-500;
+}
+
+/* Card ribbon */
+.card-ribbon {
+  @apply absolute top-0 right-0 bg-primary text-primary-foreground text-xs px-2 py-0.5 rounded-bl-md;
+}

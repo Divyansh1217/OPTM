@@ -1,0 +1,122 @@
+
+@tailwind utilities;
+
+@layer utilities {
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  .glass-morphism {
+    @apply backdrop-blur-xl bg-white/80 dark:bg-gray-800/80 border border-white/20 dark:border-gray-700/50 shadow-lg;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .neo-blur {
+    @apply backdrop-blur-2xl bg-white/10 border border-white/20;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-br from-primary via-primary/80 to-accent bg-clip-text text-transparent;
+    visibility: visible !important;
+  }
+  
+  .visible-content {
+    @apply opacity-100 visible;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 10;
+    position: relative;
+  }
+  
+  .card-shadow {
+    @apply shadow-md hover:shadow-lg transition-shadow duration-200;
+    visibility: visible !important;
+  }
+  
+  .content-visible {
+    @apply opacity-100 visible z-10;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+  }
+
+  /* Visibility enhancement utilities */
+  .high-contrast-text {
+    @apply text-gray-900 dark:text-white;
+    visibility: visible !important;
+  }
+  
+  .visible-card {
+    @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .elevated-element {
+    @apply z-30 shadow-md;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .foreground-element {
+    @apply z-20;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Loading state utilities */
+  .loading-container {
+    @apply fixed inset-0 flex items-center justify-center bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm z-50;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .loading-spinner {
+    @apply animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-primary;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Enhanced visibility utilities */
+  .force-visible {
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .ensure-visible {
+    position: relative !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+  }
+  
+  /* Dashboard content visibility fix */
+  .dashboard-content {
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Ensure form elements are visible */
+  .form-visible {
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 2;
+  }
+}

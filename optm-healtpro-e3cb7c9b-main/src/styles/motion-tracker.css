@@ -1,0 +1,188 @@
+
+/* Primary Motion Tracker Styles */
+.motion-tracker-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--card);
+  transition: all 0.3s ease;
+  border-radius: 0.75rem;
+}
+
+/* Motion tracker header styling */
+.motion-tracker-header {
+  background: linear-gradient(90deg, hsla(221, 45%, 73%, 0.15) 0%, hsla(220, 78%, 29%, 0.05) 100%);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 640px) {
+  .motion-tracker-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* Camera view container */
+.camera-container {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 0;
+  background-color: #111827;
+}
+
+/* Video element */
+.camera-view {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Canvas overlay for motion tracking */
+.tracking-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+/* Status indicator for AI readiness */
+.ai-status {
+  display: flex;
+  align-items: center;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+}
+
+/* Animation for loading indicator */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Tracking indicator */
+.tracking-active-indicator {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.indicator-dot {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Motion tracker cards */
+.motion-tracker-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.motion-tracker-main {
+  grid-column: span 8 / span 8;
+}
+
+.motion-tracker-sidebar {
+  grid-column: span 4 / span 4;
+}
+
+/* Feedback display styles */
+.feedback-display {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Exercise instruction card enhancements */
+.instruction-list {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.instruction-list li {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+/* Stats card */
+.stats-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--background);
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .motion-tracker-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .motion-tracker-main,
+  .motion-tracker-sidebar {
+    grid-column: span 1 / span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .motion-tracker-header {
+    padding: 1rem;
+  }
+  
+  .motion-tracker-grid {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .ai-status {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .stats-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

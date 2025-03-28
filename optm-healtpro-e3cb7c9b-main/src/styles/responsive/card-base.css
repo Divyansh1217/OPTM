@@ -1,0 +1,100 @@
+
+/* Base card styles */
+@media (max-width: 768px) {
+  .content-card {
+    @apply p-4 rounded-lg shadow-sm;
+  }
+  
+  .card-title {
+    @apply text-base font-medium;
+  }
+  
+  .card-description {
+    @apply text-xs text-muted-foreground;
+  }
+  
+  .card-header {
+    @apply mb-3 pb-2 border-b border-border/30;
+  }
+  
+  .card-footer {
+    @apply mt-3 pt-3 flex-wrap gap-2 border-t border-border/30;
+  }
+  
+  .card-spacing-lg > * + * {
+    @apply mt-4;
+  }
+  
+  .card-spacing-md > * + * {
+    @apply mt-3;
+  }
+  
+  .cards-container {
+    @apply gap-4 grid grid-cols-1;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-card {
+    @apply p-3 rounded-md;
+  }
+  
+  .card-header {
+    @apply mb-2 pb-1;
+  }
+  
+  .card-title {
+    @apply text-sm font-semibold;
+  }
+  
+  .card-icon {
+    @apply w-6 h-6 text-primary;
+  }
+  
+  .card-icon-sm {
+    @apply w-5 h-5;
+  }
+  
+  .card-icon-lg {
+    @apply w-8 h-8;
+  }
+  
+  .card-footer {
+    @apply mt-2 pt-2;
+  }
+  
+  .card-spacing-sm > * + * {
+    @apply mt-1;
+  }
+  
+  .card-spacing-md > * + * {
+    @apply mt-2;
+  }
+  
+  .card-spacing-lg > * + * {
+    @apply mt-3;
+  }
+}
+
+/* Card dividers and separators */
+.card-divider {
+  @apply w-full h-px bg-border/30 my-3;
+}
+
+/* Card hover effects */
+.card-interactive {
+  @apply hover:shadow-md transition-shadow duration-200 cursor-pointer;
+}
+
+/* Card grid layouts */
+.card-grid-2 {
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-4;
+}
+
+.card-grid-3 {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+.card-grid-4 {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4;
+}

@@ -1,0 +1,137 @@
+
+/* Glass card variant */
+.glass-card {
+  @apply bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-700/30;
+}
+
+/* Content spacing utilities */
+.card-spacing-sm > * + * {
+  @apply mt-2;
+}
+
+.card-spacing-md > * + * {
+  @apply mt-3 md:mt-4;
+}
+
+.card-spacing-lg > * + * {
+  @apply mt-4 md:mt-6;
+}
+
+/* Text alignment options */
+.card-text-left {
+  @apply text-left;
+}
+
+.card-text-center {
+  @apply text-center;
+}
+
+/* Grid layouts for card contents */
+.card-grid-2 {
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4;
+}
+
+.card-grid-3 {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4;
+}
+
+.card-grid-4 {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4;
+}
+
+/* Gradient card variants */
+.card-gradient-primary {
+  @apply bg-gradient-to-br from-primary/10 to-primary/5;
+}
+
+.card-gradient-secondary {
+  @apply bg-gradient-to-br from-secondary/30 to-secondary/10;
+}
+
+.card-gradient-accent {
+  @apply bg-gradient-to-br from-accent/20 to-accent/5;
+}
+
+/* Bordered card variants */
+.card-bordered {
+  @apply border-2;
+}
+
+.card-bordered-primary {
+  @apply border-2 border-primary/30;
+}
+
+.card-bordered-secondary {
+  @apply border-2 border-secondary/50;
+}
+
+/* Card with highlight bar */
+.card-highlight-left {
+  @apply border-l-4 border-l-primary;
+}
+
+.card-highlight-top {
+  @apply border-t-4 border-t-primary;
+}
+
+/* Interactive card variants */
+.card-clickable {
+  @apply cursor-pointer transition-all duration-200 hover:shadow-md active:scale-[0.99];
+}
+
+/* Card with status background */
+.card-status-success {
+  @apply bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800;
+}
+
+.card-status-warning {
+  @apply bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800;
+}
+
+.card-status-danger {
+  @apply bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800;
+}
+
+.card-status-info {
+  @apply bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800;
+}
+
+/* Dashboards cards layouts */
+.dashboard-card-sm {
+  @apply p-4 shadow-sm rounded-lg;
+}
+
+.dashboard-card-md {
+  @apply p-5 shadow-md rounded-lg;
+}
+
+.dashboard-card-lg {
+  @apply p-6 shadow-md rounded-xl;
+}
+
+/* Card with icon */
+.card-with-icon {
+  @apply flex items-start gap-3;
+}
+
+.card-icon-rounded {
+  @apply rounded-full p-2 bg-primary/10 flex items-center justify-center;
+}
+
+/* Card with hover overlay */
+.card-with-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 
+  Note: The group class needs to be added directly in HTML
+  Example usage:
+  <div class="card-with-overlay group">
+    <div class="card-overlay">Overlay content</div>
+  </div>
+*/
+
+.card-overlay {
+  @apply absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity;
+}

@@ -1,0 +1,86 @@
+
+/* Base card styles */
+.content-card {
+  @apply bg-card dark:bg-gray-800 rounded-lg border border-border/40 shadow-sm overflow-hidden transition-all duration-200;
+}
+
+/* Card sizes */
+.card-sm {
+  @apply p-3 md:p-4;
+}
+
+.card-md {
+  @apply p-4 md:p-5;
+}
+
+.card-lg {
+  @apply p-5 md:p-6;
+}
+
+/* Card layouts */
+.card-flex {
+  @apply flex flex-col h-full;
+}
+
+.card-header {
+  @apply flex items-center justify-between mb-4 pb-2 border-b border-border/30;
+}
+
+.card-title {
+  @apply text-base md:text-lg font-medium flex items-center gap-2;
+}
+
+.card-description {
+  @apply text-xs md:text-sm text-muted-foreground mt-1;
+}
+
+.card-content {
+  @apply flex-1 flex flex-col;
+}
+
+.card-footer {
+  @apply mt-4 pt-3 border-t border-border/30 flex justify-between items-center flex-wrap gap-2;
+}
+
+/* Card with hover effects */
+.card-hover {
+  @apply hover:shadow-md hover:border-border/60 transition-all duration-200;
+}
+
+/* Card with gradient background */
+.card-gradient {
+  @apply bg-gradient-to-br from-card to-muted/20;
+}
+
+/* Card with icon */
+.card-icon-left {
+  @apply flex items-start gap-3;
+}
+
+.card-icon-container {
+  @apply p-2 rounded-full bg-primary/10 flex-shrink-0;
+}
+
+/* Compact card */
+.card-compact {
+  @apply p-3 text-sm;
+}
+
+/* Card section divider */
+.card-section-divider {
+  @apply w-full h-px bg-border/30 my-3;
+}
+
+/* Card group (connected cards) */
+.card-group {
+  @apply divide-y divide-border/30 rounded-lg border border-border/40 overflow-hidden;
+}
+
+.card-group-item {
+  @apply p-4 bg-card;
+}
+
+/* Interactive card */
+.card-interactive {
+  @apply cursor-pointer hover:bg-muted/10 active:bg-muted/20 transition-colors;
+}

@@ -1,0 +1,26 @@
+
+/* Make hotspots more responsive */
+@media (max-width: 768px) {
+  .hotspot {
+    @apply w-5 h-5;
+  }
+}
+
+@media (max-width: 480px) {
+  .hotspot {
+    @apply w-4 h-4;
+  }
+}
+
+/* Make annotations more responsive */
+@media (max-width: 768px) {
+  .annotation {
+    @apply p-3 max-w-[150px] text-sm;
+  }
+}
+
+@media (max-width: 480px) {
+  .annotation {
+    @apply p-2 max-w-[120px] text-xs;
+  }
+}

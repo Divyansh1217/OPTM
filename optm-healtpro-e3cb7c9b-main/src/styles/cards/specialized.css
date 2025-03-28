@@ -1,0 +1,58 @@
+
+/* Data visualization card specific styles */
+.data-card {
+  @apply flex flex-col h-full;
+}
+
+.data-card-header {
+  @apply flex-none mb-2;
+}
+
+.data-card-body {
+  @apply flex-1 overflow-hidden;
+}
+
+.data-card-footer {
+  @apply flex-none mt-2;
+}
+
+/* Icon containers for consistent sizing */
+.card-icon {
+  @apply flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center;
+}
+
+.card-icon-sm {
+  @apply w-6 h-6;
+}
+
+.card-icon-lg {
+  @apply w-10 h-10;
+}
+
+/* Prevent overflow issues with responsive tables in cards */
+.card-table-container {
+  @apply w-full overflow-x-auto;
+}
+
+/* Fix for card with form elements */
+.card-form {
+  @apply flex flex-col gap-4;
+}
+
+.card-form-row {
+  @apply flex flex-col sm:flex-row gap-3;
+}
+
+/* Ensure proper z-index for card dropdowns/tooltips */
+.card-dropdown {
+  @apply z-50;
+}
+
+/* Fix for exercise cards to prevent button overflow */
+.exercise-card-footer {
+  @apply pt-0 pb-3 flex justify-between flex-wrap gap-2 w-full;
+}
+
+.exercise-card-button {
+  @apply flex-grow-0 flex-shrink-0 max-w-[48%];
+}

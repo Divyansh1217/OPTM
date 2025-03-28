@@ -1,0 +1,35 @@
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.hotspot-pulse {
+  @apply absolute w-full h-full rounded-full bg-primary/30 animate-pulse-light;
+}
+
+.progress-circle {
+  @apply transition-all duration-1000 ease-in-out;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.progress-circle-bg {
+  @apply fill-none stroke-gray-200/40;
+}
+
+.progress-circle-fill {
+  @apply fill-none transition-all duration-1000 ease-in-out;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

@@ -1,0 +1,34 @@
+
+/* Make button text more responsive */
+@media (max-width: 480px) {
+  .btn-responsive-text {
+    font-size: 0.875rem;
+  }
+  
+  .btn-icon-only {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .btn-icon-only span {
+    display: none;
+  }
+  
+  .btn-icon-only svg {
+    margin-right: 0;
+  }
+}
+
+/* Improved dropdown visibility on mobile */
+.dropdown-content {
+  z-index: 50;
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Fix select dropdowns being cut off */
+.select-dropdown {
+  overflow: visible !important;
+  z-index: 50 !important;
+}

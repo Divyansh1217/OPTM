@@ -1,0 +1,23 @@
+
+/* Make metric cards more responsive */
+@media (max-width: 768px) {
+  .metric-card {
+    @apply p-3 rounded-lg shadow-sm bg-card border border-border/30 hover:shadow-md transition-all duration-200;
+  }
+  
+  .metric-card-header {
+    @apply flex items-center justify-between mb-2;
+  }
+  
+  .metric-card-icon {
+    @apply p-2 rounded-full bg-primary/10 text-primary;
+  }
+  
+  .metric-card-value {
+    @apply text-xl font-bold;
+  }
+  
+  .metric-card-label {
+    @apply text-xs text-muted-foreground;
+  }
+}

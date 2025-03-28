@@ -1,0 +1,73 @@
+
+/* Biomarker sections specific styles */
+@media (max-width: 768px) {
+  .biomarker-detail-section {
+    @apply p-4 rounded-lg bg-muted/10;
+  }
+  
+  .biomarker-detail-section h4 {
+    @apply text-sm mb-2 font-medium;
+  }
+  
+  .biomarker-detail-section ul {
+    @apply pl-5 space-y-1.5;
+  }
+  
+  .biomarker-detail-section p, 
+  .biomarker-detail-section li {
+    @apply text-sm break-words;
+  }
+  
+  .biomarker-dialog-content {
+    @apply p-4 max-h-[85vh] overflow-y-auto;
+  }
+  
+  .biomarker-dialog-section {
+    @apply space-y-4 py-4;
+  }
+  
+  /* Make biomarker cards more responsive and attractive */
+  .biomarker-card {
+    @apply p-3 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md;
+  }
+  
+  .biomarker-card-header {
+    @apply text-sm mb-1 font-medium flex items-center gap-1;
+  }
+  
+  .biomarker-card-value {
+    @apply text-lg font-bold;
+  }
+  
+  .biomarker-card-footer {
+    @apply text-xs flex items-center justify-between border-t border-border/20 pt-2 mt-2;
+  }
+}
+
+@media (max-width: 480px) {
+  .biomarker-detail-section {
+    @apply p-3 rounded-lg;
+  }
+  
+  .biomarker-detail-section h4 {
+    @apply text-xs mb-1.5 font-medium;
+  }
+  
+  .biomarker-detail-section ul {
+    @apply pl-4 space-y-1;
+  }
+  
+  .biomarker-detail-section p, 
+  .biomarker-detail-section li {
+    @apply text-xs leading-relaxed break-words;
+  }
+  
+  /* Dialog specific adjustments */
+  .biomarker-dialog-content {
+    @apply p-3 max-h-[80vh];
+  }
+  
+  .biomarker-dialog-section {
+    @apply space-y-3 py-3;
+  }
+}
